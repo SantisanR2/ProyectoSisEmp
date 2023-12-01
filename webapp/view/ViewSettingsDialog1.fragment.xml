@@ -1,0 +1,81 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+    <ViewSettingsDialog>
+        
+        <filterItems>
+            
+            <ViewSettingsFilterItem text="ID" key="ID"
+                                    items="{path: '/ID'}">
+                <items>
+                    <ViewSettingsItem key="String___ID___{}" text="{}"></ViewSettingsItem>
+                </items>
+            </ViewSettingsFilterItem>
+            
+            
+            <ViewSettingsFilterItem text="Descripcion" key="Descripcion"
+                                    items="{path: '/Descripcion'}">
+                <items>
+                    <ViewSettingsItem key="String___Descripcion___{}" text="{}"></ViewSettingsItem>
+                </items>
+            </ViewSettingsFilterItem>
+            
+            
+            <ViewSettingsFilterItem text="estado" key="estado"
+                                    items="{path: '/estado'}">
+                <items>
+                    <ViewSettingsItem key="String___estado___{}" text="{}"></ViewSettingsItem>
+                </items>
+            </ViewSettingsFilterItem>
+            
+            
+            <ViewSettingsFilterItem text="Prioridad" key="Prioridad"
+                                    items="{path: '/Prioridad'}">
+                <items>
+                    <ViewSettingsItem key="String___Prioridad___{}" text="{}"></ViewSettingsItem>
+                </items>
+            </ViewSettingsFilterItem>
+            
+            
+            <ViewSettingsFilterItem text="Tipo" key="Tipo"
+                                    items="{path: '/Tipo'}">
+                <items>
+                    <ViewSettingsItem key="String___Tipo___{}" text="{}"></ViewSettingsItem>
+                </items>
+            </ViewSettingsFilterItem>
+            
+            
+        </filterItems>
+        
+
+        
+        <sortItems>
+            
+            <ViewSettingsItem text="ID" key="ID"/>
+            
+            <ViewSettingsItem text="Descripcion" key="Descripcion"/>
+            
+            <ViewSettingsItem text="estado" key="estado"/>
+            
+            <ViewSettingsItem text="Prioridad" key="Prioridad"/>
+            
+            <ViewSettingsItem text="Tipo" key="Tipo"/>
+            
+        </sortItems>
+        
+
+        
+        <groupItems>
+            
+            <ViewSettingsItem text="ID" key="ID"/>
+            
+            <ViewSettingsItem text="Descripcion" key="Descripcion"/>
+            
+            <ViewSettingsItem text="estado" key="estado"/>
+            
+            <ViewSettingsItem text="Prioridad" key="Prioridad"/>
+            
+            <ViewSettingsItem text="Tipo" key="Tipo"/>
+            
+        </groupItems>
+        
+    </ViewSettingsDialog>
+</core:FragmentDefinition>

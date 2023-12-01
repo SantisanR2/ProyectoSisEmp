@@ -1,0 +1,105 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="9f67418ca42ba3c81a1e7824" xml:lang="en" sap:schema-version="0000" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityContainer Name="9f67418ca42ba3c81a1e7824_Entities" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="peticionSet" EntityType="9f67418ca42ba3c81a1e7824.peticion" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="peticioninfoclienteinfocliente" Association="9f67418ca42ba3c81a1e7824.peticioninfoclienteinfocliente" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="peticionSet" Role="FromRole_peticioninfoclienteinfocliente"/>
+                    <End EntitySet="infoclienteSet" Role="ToRole_peticioninfoclienteinfocliente"/>
+                </AssociationSet>
+                <AssociationSet Name="peticionaplicacionaplicacion" Association="9f67418ca42ba3c81a1e7824.peticionaplicacionaplicacion" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="peticionSet" Role="FromRole_peticionaplicacionaplicacion"/>
+                    <End EntitySet="aplicacionSet" Role="ToRole_peticionaplicacionaplicacion"/>
+                </AssociationSet>
+                <AssociationSet Name="peticioninforcolaboradorinfocolaborador" Association="9f67418ca42ba3c81a1e7824.peticioninforcolaboradorinfocolaborador" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="peticionSet" Role="FromRole_peticioninforcolaboradorinfocolaborador"/>
+                    <End EntitySet="infocolaboradorSet" Role="ToRole_peticioninforcolaboradorinfocolaborador"/>
+                </AssociationSet>
+                <EntitySet Name="aplicacionSet" EntityType="9f67418ca42ba3c81a1e7824.aplicacion" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="infoclienteSet" EntityType="9f67418ca42ba3c81a1e7824.infocliente" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="infocolaboradorSet" EntityType="9f67418ca42ba3c81a1e7824.infocolaborador" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+            </EntityContainer>
+            <EntityType Name="peticion">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Descripcion" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Descripcion"/>
+                <Property Name="estado" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="estado"/>
+                <Property Name="Cliente" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Cliente"/>
+                <Property Name="CountCompletado" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="CountCompletado"/>
+                <Property Name="CountEnCurso" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="CountEnCurso"/>
+                <Property Name="CountSinDesarrollar" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="CountSinDesarrollar"/>
+                <Property Name="___FK_6895d946d6ff9b7b1a1e94e8_00019" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_6895d946d6ff9b7b1a1e94e8_00019"/>
+                <Property Name="Prioridad" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Prioridad"/>
+                <Property Name="___FK_4b7fcc10e691ad891a2bd321_00026" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_4b7fcc10e691ad891a2bd321_00026"/>
+                <Property Name="___FK_4b7fcc10e691ad891a2bd321_00030" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_4b7fcc10e691ad891a2bd321_00030"/>
+                <Property Name="Colaborador" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Colaborador"/>
+                <Property Name="Tipo" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Tipo"/>
+                <NavigationProperty Name="infocliente" Relationship="9f67418ca42ba3c81a1e7824.peticioninfoclienteinfocliente" FromRole="FromRole_peticioninfoclienteinfocliente" ToRole="ToRole_peticioninfoclienteinfocliente"/>
+                <NavigationProperty Name="aplicacion" Relationship="9f67418ca42ba3c81a1e7824.peticionaplicacionaplicacion" FromRole="FromRole_peticionaplicacionaplicacion" ToRole="ToRole_peticionaplicacionaplicacion"/>
+                <NavigationProperty Name="inforcolaborador" Relationship="9f67418ca42ba3c81a1e7824.peticioninforcolaboradorinfocolaborador" FromRole="FromRole_peticioninforcolaboradorinfocolaborador" ToRole="ToRole_peticioninforcolaboradorinfocolaborador"/>
+            </EntityType>
+            <Association Name="peticioninfoclienteinfocliente">
+                <End Type="9f67418ca42ba3c81a1e7824.peticion" Multiplicity="1" Role="FromRole_peticioninfoclienteinfocliente"/>
+                <End Type="9f67418ca42ba3c81a1e7824.infocliente" Multiplicity="1" Role="ToRole_peticioninfoclienteinfocliente"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_peticioninfoclienteinfocliente">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_peticioninfoclienteinfocliente">
+                        <PropertyRef Name="___FK_6895d946d6ff9b7b1a1e94e8_00019"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="peticionaplicacionaplicacion">
+                <End Type="9f67418ca42ba3c81a1e7824.peticion" Multiplicity="1" Role="FromRole_peticionaplicacionaplicacion"/>
+                <End Type="9f67418ca42ba3c81a1e7824.aplicacion" Multiplicity="1" Role="ToRole_peticionaplicacionaplicacion"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_peticionaplicacionaplicacion">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_peticionaplicacionaplicacion">
+                        <PropertyRef Name="___FK_4b7fcc10e691ad891a2bd321_00026"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="peticioninforcolaboradorinfocolaborador">
+                <End Type="9f67418ca42ba3c81a1e7824.peticion" Multiplicity="1" Role="FromRole_peticioninforcolaboradorinfocolaborador"/>
+                <End Type="9f67418ca42ba3c81a1e7824.infocolaborador" Multiplicity="1" Role="ToRole_peticioninforcolaboradorinfocolaborador"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_peticioninforcolaboradorinfocolaborador">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_peticioninforcolaboradorinfocolaborador">
+                        <PropertyRef Name="___FK_4b7fcc10e691ad891a2bd321_00030"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="aplicacion">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Nombre" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Nombre"/>
+            </EntityType>
+            <EntityType Name="infocliente">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Nombre" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Nombre"/>
+                <Property Name="email" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="email"/>
+                <Property Name="Phone" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Phone"/>
+            </EntityType>
+            <EntityType Name="infocolaborador">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Nombre" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Nombre"/>
+                <Property Name="email" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="email"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
